@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmark Manager</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form id="form">
+        <div class="mb-3">
+          <label class="form-label" for="inputEmail">Title</label>
+          <input
+            type="text"
+            class="form-control form-control-sm"
+            id="title"
+            placeholder="Enter title"
+          />
+        </div>
+        <div class="mb-3">
+          <label class="form-label">URL</label>
+          <input
+            type="text"
+            class="form-control form-control-sm"
+            placeholder="Enter URL"
+            id="url"
+          />
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Category</label>
+          <select
+            class="form-select form-select-sm"
+            aria-label=".form-select-sm example"
+            id="category"
+          >
+            <option selected>Select</option>
+            <option value="Bookmarks Bar">Bookmark Bar</option>
+            <option value="Mobile Bookmark">Mobile Bookmark</option>
+            <option value="Other Bookmark">Other Bookmark</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Tags</label>
+          <select
+            class="form-select form-select-sm"
+            aria-label=".form-select-sm example"
+            id="tags"
+          >
+            <option selected>Select</option>
+            <option value="Books">Books</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Shopping">Shopping</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Date</label>
+          <input
+            name="date"
+            class="form-control form-control-sm"
+            id="date"
+            disabled
+            readonly
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+    <div class="m-4">
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Title</th>
+              <th>URL</th>
+              <th>Category</th>
+              <th>Tags</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="./js/index.js"></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+  crossorigin="anonymous"
+></script>
