@@ -9,7 +9,7 @@ const Image = db.images;
 
 // main work
 
-// 1. create product
+// 1. create image
 
 const addImage = async (req, res) => {
   let info = {
@@ -25,6 +25,17 @@ const addImage = async (req, res) => {
 // 2. get all images
 
 const getAllImages = async (req, res) => {
+  if (req.query.sort == "asc") {
+    const image = await Image.findAll({
+      order: [["title", "ASC"]],
+    });
+    return res.status(201).send(image);
+  } else if (req.query.sort == "desc") {
+    const image = await Image.findAll({
+      order: [["title", "DESC"]],
+    });
+    return res.status(201).send(image);
+  }
   let images = await Image.findAll({});
   res.status(200).send(images);
 };
