@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "fs": "^0.0.1-security",
+    "fuse.js": "^6.6.2",
     "pidusage": "^3.0.0"
   }
 }
